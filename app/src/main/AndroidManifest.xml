@@ -20,7 +20,8 @@
         <activity android:name=".resultadoCuadrado" />
         <activity android:name=".Rectangulo" />
         <activity android:name=".ResultadoRectangulo" />
-        <activity android:name=".areas2"></activity>
+        <activity android:name=".areas2" />
+        <activity android:name=".listado" />
     </application>
 
 </manifest>

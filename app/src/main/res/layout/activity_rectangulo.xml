@@ -34,7 +34,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/txtBase"
                 android:layout_weight="1"
@@ -46,7 +46,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/txtAltura"
             android:hint="@string/altura"
@@ -58,18 +58,20 @@
             android:layout_height="93dp">
 
             <Button
-                android:text="@string/calcular"
+                android:id="@+id/btnCalcular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnCalcular"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="calcularAR"
+                android:text="@string/calcular" />
 
             <Button
-                android:text="@string/borrar"
+                android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button3"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="borrar"
+                android:text="@string/borrar" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

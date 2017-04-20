@@ -19,7 +19,7 @@ public class Rectangulo extends AppCompatActivity {
         setContentView(R.layout.activity_rectangulo);
         cajaBase = (EditText)findViewById(R.id.txtBase);
         cajaAltura = (EditText)findViewById(R.id.txtAltura);
-        i = new Intent(this, resultadoCuadrado.class);
+        i = new Intent(this, ResultadoRectangulo.class);
         b = new Bundle();
     }
 
@@ -30,17 +30,21 @@ public class Rectangulo extends AppCompatActivity {
     }
 
     public void calcularAR(View v){
+        String tipo= getString(R.string.areaR), aux;
         if(validar()) {
             double altura,base, result;
 
             base = Double.parseDouble(cajaBase.getText().toString());
             altura = Double.parseDouble(cajaAltura.getText().toString());
             result = base * altura;
-
+            aux = base+", "+altura;
             b.putDouble("L", result);
             i.putExtras(b);
 
             startActivity(i);
+
+            Areas p = new Areas(tipo, aux, result);
+            p.guardar();
         }
     }
 

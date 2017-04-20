@@ -34,6 +34,10 @@ public class areas2 extends AppCompatActivity {
                         i = new Intent(areas2.this, ACuadrado.class);
                         startActivity(i);
                         break;
+                    case 1:
+                        i = new Intent(areas2.this, Rectangulo.class);
+                        startActivity(i);
+                        break;
                 }
             }
         });

@@ -11,31 +11,36 @@ import android.widget.ListView;
 
 public class Areas  {
 
-    private ListView ls;
-    private Resources res;
-    private String [] opc;
-    private Intent i;
+    String operacion, datos;
+    double resultado;
 
-    String operacion;
-    int datos, resultado;
-
-    public Areas(String operacion, int datos, int resultado) {
+    public Areas(String operacion, String datos, double resultado) {
         this.operacion = operacion;
         this.datos = datos;
         this.resultado = resultado;
     }
 
-    public String getOperacion() { return operacion; }
+    public String getOperacion() {
+        return operacion;
+    }
 
-    public void setOperacion(String operacion) { this.operacion = operacion;}
+    public void setOperacion(String operacion) {
+        this.operacion = operacion;
+    }
 
-    public int getDatos() { return datos; }
+    public String getDatos() { return datos; }
 
-    public void setDatos(int datos) { this.datos = datos; }
+    public void setDatos(String datos) {
+        this.datos = datos;
+    }
 
-    public int getResultado() {return resultado; }
+    public double getResultado() {
+        return resultado;
+    }
 
-    public void setResultado(int resultado) { this.resultado = resultado; }
+    public void setResultado(double resultado) {
+        this.resultado = resultado;
+    }
 
     public void guardar(){ Datos.guardar(this);}
 

@@ -59,11 +59,12 @@
         </LinearLayout>
 
         <Button
-            android:text="@string/ok"
+            android:id="@+id/btnOkRectangulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnOkRectangulo"
-            android:textAlignment="center"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="regresar"
+            android:text="@string/ok"
+            android:textAlignment="center" />
     </LinearLayout>
 </RelativeLayout>
