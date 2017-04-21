@@ -43,6 +43,5 @@ public class ACuadrado extends AppCompatActivity {
 
             startActivity(i);
         }
-
     }
 }

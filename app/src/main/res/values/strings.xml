@@ -9,6 +9,8 @@
     <string name="resultado">Resultado</string>
     <string name="area">Area: </string>
     <string name="error_1">Por favor digite un numero</string>
+    <string name="error_2">Por favor digite una base</string>
+    <string name="error_3">Por favor digite una altura</string>
     <string name="ok">OK</string>
     <string name="base">Base</string>
     <string name="altura">Altura</string>

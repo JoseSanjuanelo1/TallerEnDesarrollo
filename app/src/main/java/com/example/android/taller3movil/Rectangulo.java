@@ -28,4 +28,34 @@ public class Rectangulo extends AppCompatActivity {
         cajaAltura.setText("");
         cajaBase.requestFocus();
     }
+
+    public void calcularAR(View v){
+        if(validar()) {
+            double altura,base, result;
+
+            base = Double.parseDouble(cajaBase.getText().toString());
+            altura = Double.parseDouble(cajaAltura.getText().toString());
+            result = base * altura;
+
+            b.putDouble("L", result);
+            i.putExtras(b);
+
+            startActivity(i);
+        }
+    }
+
+    public boolean validar(){
+        if (cajaBase.getText().toString().isEmpty() ){
+            //Toast.makeText(getApplicationContext(), "Digite por favor el nombre" , Toast.LENGTH_SHORT).show();
+            cajaBase.setError(getResources().getString(R.string.error_2));
+            return false;
+        }
+
+        if (cajaAltura.getText().toString().isEmpty()){
+            //Toast.makeText(getApplicationContext(), "Digite por favor el apellido" , Toast.LENGTH_SHORT).show();
+            cajaAltura.setError(getResources().getString(R.string.error_3));
+            return false;
+        }
+        return true;
+    }
 }
